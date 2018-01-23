@@ -1,33 +1,47 @@
 @font-face {
-  font-family: "Raleway-ex";
-  src: url("../fonts/Raleway/RalewayBold.eot");
-  src: url("../fonts/Raleway/RalewayBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayBold.woff") format("woff"), url("../fonts/Raleway/RalewayBold.ttf") format("truetype"), url("../fonts/Raleway/RalewayBold.svg#Raleway-ex") format("svg");
+  font-family: "RobotoGym";
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Bold.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: "Raleway-ex";
-  src: url("../fonts/Raleway/RalewayRegular.eot");
-  src: url("../fonts/Raleway/RalewayRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayRegular.woff") format("woff"), url("../fonts/Raleway/RalewayRegular.ttf") format("truetype"), url("../fonts/Raleway/RalewayRegular.svg#Raleway-ex") format("svg");
+  font-family: "RobotoGym";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Regular.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
-body {
+@font-face {
+  font-family: "RobotoGym";
+  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Light.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Light.woff2") format("woff2");
+  font-weight: light;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Material";
+  src: url("../fonts/Material/MaterialIcons-Regular.ttf") format("truetype");
+  src: url("../fonts/Material/MaterialIcons-Regular.woff") format("woff");
+  src: url("../fonts/Material/MaterialIcons-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+body,
+html {
   font-size: 16px;
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: Raleway-ex, sans-serif;
+  font-family: RobotoGym, sans-serif;
   overflow-x: hidden;
   opacity: 1; }
 
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto; }
-
-.text-center {
-  text-align: center; }
+.grid {
+  display: grid; }
 
 h1 {
   font-size: 3rem;
@@ -49,9 +63,105 @@ h5 {
 h6 {
   font-size: 1.6rem; }
 
-.s1 {
-  background: red;
-  border: 1px solid; }
+.top {
+  grid-template-columns: 1fr;
+  grid-template-rows: min-comtent 1fr;
+  background-image: url("../img/top.jpg");
+  width: 100%;
+  min-height: 950px;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .top::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6; }
+  .top .menu {
+    position: relative;
+    width: 50px;
+    height: 35px;
+    left: 10%;
+    margin-top: 5%; }
+    .top .menu .menu1 {
+      width: 50px;
+      height: 1px;
+      background: #fff; }
+    .top .menu .menu2 {
+      width: 50px;
+      height: 1px;
+      background: #fff;
+      margin-top: 10px; }
+    .top .menu .menu3 {
+      width: 50px;
+      height: 1px;
+      background: #fff;
+      margin-top: 10px; }
+    .top .menu .menu4 {
+      width: 50px;
+      height: 1px;
+      background: #fff;
+      margin-top: 10px; }
+  .top .vord {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    justify-items: center;
+    padding-top: 5%; }
+    .top .vord img {
+      width: 235px;
+      margin-top: -4%; }
+    .top .vord h1 {
+      font-size: 120px;
+      font-weight: bold; }
+    .top .vord span {
+      font-size: 30px;
+      font-weight: thin; }
+
+.photo {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 0px; }
+  .photo .img {
+    display: grid;
+    position: relative; }
+    .photo .img img {
+      background-position: center;
+      background-size: cover;
+      height: 425px;
+      width: 635px; }
+    .photo .img:nth-of-type(2n+1):before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #C4810D;
+      opacity: .5; }
+    .photo .img .test {
+      opacity: 0;
+      position: absolute;
+      top: 45%;
+      left: 45%;
+      background: url("../img/down-chevron.svg") no-repeat; }
+    .photo .img:hover .test {
+      opacity: 1; }
+    .photo .img .modal {
+      width: 90%;
+      min-height: 90%;
+      overflow: hidden;
+      margin-top: -2.5%; }
+      .photo .img .modal img {
+        width: 100%;
+        height: 100%; }
+    .photo .img .materialboxed:hover:not(.active) {
+      cursor: pointer;
+      opacity: 1; }
 
 /*==========  Desktop First  ========== */
 /* Large Devices, Wide Screens */

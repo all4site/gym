@@ -24,7 +24,7 @@ gulp.task('build', ['clean', 'img', 'jadebuild'], function () {
 });
 
 gulp.task('jadebuild', function () {
-	return gulp.src('app/*.jade')
+	return gulp.src('app/index.jade')
 		.pipe(jade({
 			pretty: true
 		}))
@@ -72,7 +72,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade', function () {
-	gulp.src('app/*.jade')
+	gulp.src('app/index.jade')
 		.pipe(jade({
 			pretty: true
 		}))
