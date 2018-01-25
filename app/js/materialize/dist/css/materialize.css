@@ -2146,7 +2146,7 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -4421,7 +4421,7 @@ nav .input-field label.active i {
   }
 }
 
-@font-face {
+/*@font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff");
   font-weight: 100;
@@ -4449,18 +4449,18 @@ nav .input-field label.active i {
   font-family: "Roboto";
   src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff");
   font-weight: 700;
-}
+}*/
 
 a {
   text-decoration: none;
 }
 
-html {
+/*html {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
-}
+}*/
 
 @media only screen and (min-width: 0) {
   html {

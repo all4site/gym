@@ -5,7 +5,7 @@
      $('.carousel').carousel({
      	fullWidth: true,
      	indicators: true,
-     	padding: 1000,
+     	padding: 800,
      	dist: 100
      });
   });
