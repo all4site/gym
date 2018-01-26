@@ -31,6 +31,14 @@
   font-style: normal; }
 
 @font-face {
+  font-family: "Gym";
+  src: url("../fonts/Roboto/Roboto-Light.woff2") format("woff2");
+  src: url("../fonts/Roboto/Roboto-Light.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
   font-family: "Material";
   src: url("../fonts/Material/MaterialIcons-Regular.woff2") format("woff2");
   src: url("../fonts/Material/MaterialIcons-Regular.woff") format("woff");
@@ -49,6 +57,11 @@ body {
 
 .grid {
   display: grid; }
+
+.material-icons {
+  font-family: Material;
+  font-weight: normal;
+  font-style: normal; }
 
 h1 {
   font-size: 3rem;
@@ -143,7 +156,7 @@ h6 {
       background-position: center;
       background-size: cover;
       height: 425px;
-      width: 635px; }
+      width: 100%; }
     .photo .img:nth-of-type(2n+1):before {
       content: '';
       position: absolute;
@@ -249,42 +262,87 @@ h6 {
 
 .footer {
   background: rgba(210, 169, 63, 0.5);
-  grid-template-rows: 1fr 50px;
+  grid-template-rows: minmax(400px, 1fr) 50px;
   color: #000; }
   .footer .content {
     justify-self: center;
     grid-template-columns: 1fr 2fr 1fr;
-    width: 70%;
-    text-align: center; }
+    width: 70%; }
     .footer .content h5 {
       margin: 50px 0 50px; }
     .footer .content .menu {
-      grid-column: 1; }
+      grid-column: 1;
+      justify-items: center; }
       .footer .content .menu ol {
         text-align: left;
         list-style-type: none;
         color: #7E6C21;
         font-size: 24px;
-        -webkit-text-decoration: uppercase;
-                text-decoration: uppercase;
-        font-weight: 100; }
+        text-transform: uppercase;
+        font-weight: 200;
+        margin: 0 0 50px;
+        padding: 0;
+        margin-left: -30px; }
+        .footer .content .menu ol li a {
+          color: #7E6C21; }
         .footer .content .menu ol li:before {
-          content: "\f058 ";
+          content: "\f05d";
           font-family: 'FontAwesome';
           color: #7E6C21;
-          margin-right: 20px; }
+          margin-right: 15px; }
     .footer .content .colback {
+      justify-items: center;
       grid-column: 2; }
+      .footer .content .colback h5 {
+        margin-bottom: 0; }
+      .footer .content .colback .material-icons {
+        color: #7E6C21; }
+      .footer .content .colback .input-field {
+        width: 70%;
+        position: relative; }
+        .footer .content .colback .input-field input[type="text"] {
+          border-bottom: 1px solid #7E6C21;
+          position: relative;
+          display: block; }
+          .footer .content .colback .input-field input[type="text"]:focus {
+            border-bottom: 1px solid #7E6C21;
+            -webkit-box-shadow: 0 1px 0 0 #7E6C21;
+                    box-shadow: 0 1px 0 0 #7E6C21; }
+        .footer .content .colback .input-field .valid {
+          border-bottom: 1px solid #C85203;
+          -webkit-box-shadow: 0 1px 0 0 #C85203;
+                  box-shadow: 0 1px 0 0 #C85203; }
+        .footer .content .colback .input-field label {
+          color: #7E6C21; }
+        .footer .content .colback .input-field .active {
+          color: #C85203; }
+        .footer .content .colback .input-field label:not(.label-icon).active {
+          -webkit-transform: translateY(-5px) scale(0.8);
+                  transform: translateY(-5px) scale(0.8); }
     .footer .content .soc {
-      grid-column: 3; }
+      grid-column: 3;
+      justify-items: center; }
+      .footer .content .soc .btn-floating {
+        width: 70px;
+        height: 70px;
+        background: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        border: 1px solid #7E6C21; }
+        .footer .content .soc .btn-floating:hover {
+          -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+        .footer .content .soc .btn-floating i {
+          line-height: 65px;
+          color: #7E6C21; }
   .footer .copyright {
     background: rgba(255, 255, 255, 0.4);
     grid-row: 2; }
-    .footer .copyright .test {
+    .footer .copyright .fottercopy {
       width: 70%;
       justify-self: center;
       text-align: center; }
-      .footer .copyright .test p {
+      .footer .copyright .fottercopy p {
         margin-bottom: 0; }
 
 /*==========  Desktop First  ========== */

@@ -1,17 +1,36 @@
 .footer.grid
 	.content.grid
-		.menu
+		.menu.grid
 			h5 МЕНЮ
 			ol
-				li ГРАВНАЯ
-				li НАШ ЗАЛ
-				li ТРЕНЕРА
-				li О НАС
-				li ЦЕНЫ
-		.colback
+				li 
+					a(href="#top") ГЛАВНАЯ
+				li 
+					a(href="#photo") НАШ ЗАЛ
+				li 
+					a(href="#ourtrener") ТРЕНЕРА
+				li 
+					a(href="#about") О НАС
+				li 
+					a(href="#price") ЦЕНЫ
+		.colback.grid
 			h5 ЗАКАЗАТЬ ЗВОНОК
-		.soc
-			h5 МЫВ СОЦСЕТЯХ
+			.input-field
+				i.material-icons.prefix account_circle
+				input(type="text")#icon_prefix.validate
+				label(for="icon_prefix") Имя
+			.input-field
+				i.material-icons.prefix phone
+				input(type="text")#icon_prefix.validate
+				label(for="icon_prefix") Телефон
+		.soc.grid
+			h5 МЫ В СОЦСЕТЯХ
+			a(href="#!").btn-floating.waves-effect
+				i.fa.fa-facebook
+			.btn-floating.waves-effect
+				i.fa.fa-google-plus
+			.btn-floating.waves-effect
+				i.fa.fa-youtube
 	.copyright.grid
-		.test
+		.fottercopy
 			p © all4site.com.ua &emsp;&emsp;&emsp;   Все права защищены 2018
