@@ -18,7 +18,7 @@
   </head>
 </html>
 <body>
-  <div id="topp" class="top grid"><a href="#!" class="menu">
+  <div id="topp" class="top grid"><a href="#" data-activates="slide-out" class="button-collapse menu">
       <div class="menu1"></div>
       <div class="menu2"></div>
       <div class="menu3"></div>
@@ -47,23 +47,27 @@
       <div id="modal6" class="modal modal-close"><img src="img/photo6.jpg"/></div>
     </div>
   </div>
-  <div id="ourtreners" class="ourtreners grid">
+  <div id="ourtrener" class="ourtreners grid">
     <div class="content">
       <h2>НАШИ ТРЕНЕРЫ</h2>
       <div class="carousel center">
-        <div class="carousel-item"><img src="img/traner1.jpg" alt=""/>
+        <div class="carousel-item">
+          <div class="img"><img src="img/Без-имени-1.jpg" alt=""/></div>
           <p>
             это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.В то время некий безымянный печатник создал 
             
           </p>
         </div>
-        <div class="carousel-item"><img src="img/traner2.jpg" alt=""/>
+        <div class="carousel-item">
+          <div class="img"><img src="img/traner2-1.jpg" alt=""/></div>
           <p>это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.В то время некий безымянный печатник создал </p>
         </div>
-        <div class="carousel-item"><img src="img/traner3.jpg" alt=""/>
+        <div class="carousel-item">
+          <div class="img"><img src="img/traner3-1.jpg" alt=""/></div>
           <p>это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.В то время некий безымянный печатник создал </p>
         </div>
-        <div class="carousel-item"><img src="img/traner4.jpg" alt=""/>
+        <div class="carousel-item">
+          <div class="img"><img src="img/traner4-1.jpg" alt=""/></div>
           <p>это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.В то время некий безымянный печатник создал </p>
         </div>
       </div>
@@ -78,7 +82,7 @@
       </div>
       <div class="divider"></div>
       <div class="text">
-        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
+        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а та реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
       </div>
       <div class="img"><img src="img/about2.jpg" alt=""/></div>
     </div>
@@ -137,11 +141,11 @@
       <div class="menu grid">
         <h5>МЕНЮ</h5>
         <ol>
-          <li> <a href="#top">ГЛАВНАЯ</a></li>
-          <li> <a href="#photo">НАШ ЗАЛ</a></li>
-          <li> <a href="#ourtrener">ТРЕНЕРА</a></li>
-          <li> <a href="#about">О НАС</a></li>
-          <li> <a href="#price">ЦЕНЫ</a></li>
+          <li> <a href="#topp" data-target="menu">ГЛАВНАЯ</a></li>
+          <li> <a href="#photo" data-target="menu">НАШ ЗАЛ</a></li>
+          <li> <a href="#ourtrener" data-target="menu">ТРЕНЕРА</a></li>
+          <li> <a href="#aboutus" data-target="menu">О НАС</a></li>
+          <li> <a href="#price" data-target="menu">ЦЕНЫ</a></li>
         </ol>
       </div>
       <div class="colback grid">
@@ -167,6 +171,15 @@
       </div>
     </div>
   </div>
+  <ul id="slide-out" class="side-nav">
+    <div class="background">
+      <li><a href="#topp" data-target="menu" class="waves-effect hoverable"><span>Главная</span></a></li>
+      <li><a href="#photo" data-target="menu" class="waves-effect hoverable"><span>Фото</span></a></li>
+      <li><a href="#ourtrener" data-target="menu" class="waves-effect hoverable"><span>Наши тренеры</span></a></li>
+      <li><a href="#aboutus" data-target="menu" class="waves-effect hoverable"><span>О нас</span></a></li>
+      <li><a href="#price" data-target="menu" class="waves-effect hoverable"><span>Цены</span></a></li>
+    </div>
+  </ul>
   <!-- build:js js/main.min.js-->
   <!-- bower:js-->
   <script src="js/jquery/dist/jquery.js"></script>
