@@ -19,6 +19,7 @@
     "xalk-font-awesome": "^0.0.1",
     "normalize-css": "normalize.css#^7.0.0",
     "animate.css": "^3.5.2",
-    "materialize": "^0.100.2"
+    "materialize": "^0.100.2",
+    "slick-carousel": "slick-slide#^1.8.1"
   }
 }

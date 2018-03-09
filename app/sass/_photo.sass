@@ -1,13 +1,13 @@
 .photo
-	grid-template-columns: repeat(3, 1fr)
+	grid-template-columns: repeat(auto-fit, minmax(480px , 1fr))
 	margin-top: 0px
 	.img
 		display: grid
 		position: relative
+		align-items: stretch
 		img
 			background-position: center
 			background-size: cover
-			height: 425px
 			width: 100%
 		&:nth-of-type(2n+1)
 			&:before

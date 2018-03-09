@@ -5,15 +5,29 @@
         inDuration: 400,
         opacity: .9
     });
-     $('.carousel').carousel({
-     	fullWidth: true,
-     	indicators: true,
-     	padding: 800,
-     	dist: 100,
-     });
+     // $('.carousel').carousel({
+     // 	fullWidth: true,
+     // 	indicators: true,
+     // 	padding: 800,
+     // 	dist: 100,
+     // });
      $(".button-collapse").sideNav();
   });
-
+$(document).ready(function(){
+    $('.slidergym').slick({
+    infinite: true,
+     arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive:[{
+        breakpoint: 1280,
+        settings: {
+        arrows: false,
+        slidesToShow: 1
+    }
+    }]
+    });
+});
   $(document).ready(function() {
     $('a[data-target="menu"]').click(function() {
         var target = $(this).attr('href');

@@ -1,12 +1,16 @@
 .price
-	justify-items: center
 	background: url("../img/backgrouncosts.jpg")
-	.content
-		grid-template-columns: repeat(4, minmax(190px, 23%))
-		grid-column-gap: 30px
-		width: 70%
-		margin-bottom: 50px
-		.card
+	grid-template-columns: 1fr minmax(320px, 1280px) 1fr
+	h2
+		grid-column: span 3
+		text-align: center
+.content
+	grid-column: 2
+	grid-template-columns: repeat(4, 1fr)
+	grid-column-gap: 30px
+	margin-bottom: 50px
+	margin: 0 20px
+	.card
 			text-align: center
 			background: rgba(210, 169, 63, .4);
 			h6
