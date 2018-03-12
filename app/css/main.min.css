@@ -105,7 +105,7 @@ h6 {
     position: fixed;
     width: 50px;
     height: 35px;
-    left: 10%;
+    left: 8%;
     margin-top: 5%;
     z-index: 10; }
     .top .menu .menu1 {
@@ -310,13 +310,13 @@ h6 {
     background: #C85203a2; }
 
 .footer {
+  grid-template-columns: 1fr minmax(320px, 1280px) 1fr;
   background: rgba(210, 169, 63, 0.5);
   grid-template-rows: minmax(400px, 1fr) 50px;
   color: #000; }
   .footer .content {
-    justify-self: center;
     grid-template-columns: 1fr 2fr 1fr;
-    width: 70%; }
+    grid-column: 2; }
     .footer .content h5 {
       margin: 50px 0 50px; }
     .footer .content .menu {
@@ -340,6 +340,7 @@ h6 {
           color: #7E6C21;
           margin-right: 15px; }
     .footer .content .colback {
+      grid-column: 1;
       justify-items: center;
       grid-column: 2; }
       .footer .content .colback h5 {
@@ -371,6 +372,8 @@ h6 {
     .footer .content .soc {
       grid-column: 3;
       justify-items: center; }
+      .footer .content .soc h5 {
+        text-align: center; }
       .footer .content .soc .btn-floating {
         width: 70px;
         height: 70px;
@@ -386,7 +389,8 @@ h6 {
           color: #7E6C21; }
   .footer .copyright {
     background: rgba(255, 255, 255, 0.4);
-    grid-row: 2; }
+    grid-row: 2;
+    grid-column: span 3; }
     .footer .copyright .fottercopy {
       width: 70%;
       justify-self: center;
@@ -423,7 +427,33 @@ h6 {
         -ms-flex-pack: center;
             justify-content: center; }
     .content .card:nth-of-type(2n+1) {
-      grid-column: span 1; } }
+      grid-column: span 1; }
+  .footer .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr -webkit-min-content 1fr;
+    grid-template-rows: 1fr min-content 1fr; }
+    .footer .content h5 {
+      margin: 50px 0 20px; }
+    .footer .content .colback {
+      grid-row: 1;
+      grid-column: 1; }
+    .footer .content .menu {
+      grid-row: 3;
+      grid-column: 1; }
+      .footer .content .menu a:hover {
+        color: #564916; }
+    .footer .content .soc {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, -webkit-min-content);
+      grid-template-columns: repeat(3, min-content);
+      grid-column-gap: 20px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      grid-row: 2;
+      grid-column: 1; }
+      .footer .content .soc h5 {
+        display: none; } }
 
 @media only screen and (max-width: 660px) {
   .content {
